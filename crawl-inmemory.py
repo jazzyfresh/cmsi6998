@@ -43,11 +43,15 @@ class WebCrawler:
                 print("target url is found")
                 return
             else:
-                self.current_url = self.queue.pop(0)
+                # 1. get next url to crawl
                 # pop returns the item at the index 0
                 # and removes the item from the list
+                self.current_url = self.queue.pop(0)
+                # 2. mark url as visited
                 self.visited.add(self.current_url)
+                # 3. scrape current url webpage for more links
                 self.crawl(self.current_url)
+                # 4. print url to stdout
                 # wiki/Title --> Title
                 print(self.current_url.split("/")[-1])
         print("target url was never found :(")
