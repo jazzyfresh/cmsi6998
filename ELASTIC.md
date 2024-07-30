@@ -1,3 +1,8 @@
+## Squirrel Visualization
+```
+curl "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-10-29/nyc_squirrels.csv" > nyc_squirrels.csv
+```
+
 ## Docker Compose
 ```
 docker-compose up
