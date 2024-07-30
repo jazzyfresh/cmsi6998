@@ -1,3 +1,14 @@
+## Docker Compose
+```
+docker-compose up
+
+# get all the docker containers and their ids
+docker ps 
+
+# connect a terminal session to the elasticsearch container
+# as root user so you can install stuff
+docker exec -u root -it <elastic_container_id> bash
+```
 ### clear any existing containers
 ### if you do this, any ephemeral data will get wiped!
 ### make sure to persist your data (see below)
